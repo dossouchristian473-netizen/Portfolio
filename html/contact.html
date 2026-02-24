@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+ <head>    
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Christian Portfolio</title>
+      <link rel="stylesheet" type="text/css" href="../css/portfolio.css">
+   </head>
+
+<body>
+   <nav class="navbar">
+      <div class="nav-links">
+         <ul>
+            <li> <a href="../html/portfolio.html">Accueil</a></li>
+            <li> <a href="../html/project.html">Projets</a></li>
+            <li> <a href="../html/contact.html">Contact</a></li>
+            <li><a href="../html/Formation.html">Formations</a></li>
+            <li><a href="../html/a propos.html">A propos</a></li>
+            <li><a href="../html/competences.html">Competences</a></li>
+         </ul>
+      </div>
+      <img src="../image/bars-solid-full.svg" alt="menu hamburger" class="menu-hamburger">
+   </nav>
+   <header></header>
+   
+    <div class="row">
+                <h2 class="body"><b> Prenons Contact</b></h2>
+                <p>Vous avez un projet en tête ? Discutons de comment nous pouvons collaborer pour donner vie à vos idées.</p>
+
+                <form action="#" method="get" name="FormContact">
+                    <div class="marge form">
+                        <table id="APropos">
+                            <tr>
+                              <tr>
+                              <td> Mon mail: dossouchristian473@gmail.com</td>
+                              </tr>
+                              
+                                <th><input type="text" placeholder="Votre nom" name="TNom" pattern="\w{3,20}" required/></th>
+                                <th><input type="text" placeholder="Votre prénom" name="TPrenom" pattern="\w{3,20}" required/></th>
+                                
+                            </tr>
+                           
+                            <tr>
+                                <th><input type="email" placeholder="Votre adresse mail" name="email" pattern="\w*\d*.\w*\d*@\w*.\w{2,4}" required/></th>
+                              
+                            </tr>
+                            <tr>
+                                <th colspan="2"><input type="text" placeholder="Objet" name="TObjet" size="50" pattern="\w{5,20}\d{1,9}"/></th>
+                            </tr>
+                            <tr>
+                                <th colspan="2"><textarea placeholder="Votre message" name="msg" rows="4" required></textarea></th>
+                            </tr>
+                            <tr>
+                                <th><input type="submit"></th>
+                                <td></td>
+                            </tr>
+                        </table>
+                        
+                    </div>
+                </form>
+            </div>
+ </body>
