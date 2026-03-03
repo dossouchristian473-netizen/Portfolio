@@ -30,3 +30,12 @@
    <h1 class="mes-projets">  second projet: </h1>
       <p>Mon deuxième projet consistait en la création de mon propre site portfolio. L’objectif était de présenter mon parcours, mes compétences et mes réalisations à travers une interface claire, moderne et responsive.</p>
  </body>
+ <script>
+   const menuHamburger = document.querySelector('.menu-hamburger');
+   const navLinks = document.querySelector('.nav-links');
+
+   menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu');
+   });
+ </script>
+</html>
