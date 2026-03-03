@@ -3,7 +3,6 @@ img {
   height: 200px;
  margin-right: 10px;
  border-style: groove;
-z-index:-1;
 }
 
 body {
@@ -28,7 +27,7 @@ p {
   display: flex;
   justify-content: right;
   align-items: right;
-  z-index: -1;
+
 }
 
 .mes-info {
