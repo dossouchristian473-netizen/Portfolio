@@ -25,15 +25,11 @@ p {
   
 }
 .picture {
-    /* On supprime top: 310px et right: 30px */
-    position: relative; 
-    z-index: 1; /* Pour être sûr qu'elle reste SOUS le menu hamburger */
-}
-
-.picture img {
-    width: 150px; /* Ajustez la taille selon vos besoins */
-    height: auto;
-    border-radius: 10px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+  
 }
 
 .mes-info {
