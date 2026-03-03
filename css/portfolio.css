@@ -35,7 +35,7 @@ p {
 }
 
 .picture img {
-    width: 250px;        /* Fixez une taille pour tester */
+    width: 100px;        /* Fixez une taille pour tester */
     height: auto;
     border-radius: 10px; /* Optionnel : pour le style */
 }
