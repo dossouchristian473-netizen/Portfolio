@@ -25,8 +25,8 @@ p {
 }
 .picture {
     display: flex;
-    justify-content: center; /* Pour centrer l'image horizontalement */
-    align-items: center;
+    justify-content: right; /* Pour centrer l'image horizontalement */
+    align-items: right;
     margin-top: 20px;       /* Utilisez des marges au lieu de 'top' */
     margin-bottom: 20px;
 }
