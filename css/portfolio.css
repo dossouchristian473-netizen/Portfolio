@@ -1,8 +1,9 @@
 img {
-  width: 100px;
+  width: 200px;
   height: 200px;
  margin-right: 10px;
  border-style: groove;
+
 }
 
 body {
@@ -24,10 +25,11 @@ p {
   
 }
 .picture {
-    display: flex;
-    justify-content: right; /* Pour centrer l'image horizontalement */
-    align-items: right;
-    
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+  
 }
 
 .mes-info {
