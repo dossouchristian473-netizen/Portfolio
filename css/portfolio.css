@@ -27,7 +27,7 @@ p {
 .picture {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: right;
   margin-top: 20px;
   margin-bottom: 20px;
 }
