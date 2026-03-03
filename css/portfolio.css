@@ -25,19 +25,18 @@ p {
   
 }
 .picture {
-    display: block;      /* On oublie le flex un instant pour simplifier */
-    text-align: center;  /* Centre l'image si c'est une balise img */
-    margin: 20px auto;   /* Crée de l'espace en haut et en bas */
-    position: relative;  /* Pour être sûr qu'elle reste dans le flux */
-    top: 0 !important;   /* Annule le 310px précédent */
-    right: 0 !important; /* Annule le 30px précédent */
-    z-index: 1;          /* Assure qu'elle est sous le menu (qui devrait être à 10 ou 100) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .picture img {
-    width: 250px;        /* Fixez une taille pour tester */
-    height: auto;
-    border-radius: 10px; /* Optionnel : pour le style */
+    position: static !important;
+    display: block;
+    margin: 0 auto;
+    filter: none !important; /* Enlève le flou directement sur l'image */
 }
 
 .mes-info {
