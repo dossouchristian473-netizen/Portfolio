@@ -28,8 +28,7 @@ p {
   display: flex;
   justify-content: right;
   align-items: right;
-  
-  
+  z-index: -1;
 }
 
 .mes-info {
