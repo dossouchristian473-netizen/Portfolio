@@ -26,13 +26,13 @@ p {
 }
 .picture {
   display: flex;
-  justify-content: center;
-  align-items: right;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  justify-content: right;
+  align-items: center;
+  top: 310px;
+  position: absolute;
+  right: 30px;
+  
 }
-
-
 
 .mes-info {
   display: flex;
