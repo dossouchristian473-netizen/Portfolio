@@ -7,10 +7,17 @@ img {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #F0F5DF;
   font-family: Arial, sans-serif;
   margin: 20px;
   
+}
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 h1 {
@@ -28,7 +35,7 @@ p {
   display: flex;
   justify-content: right;
   align-items: center;
-  
+ 
   
 }
 
@@ -149,4 +156,14 @@ img.loca{
 
 td.table {
  width: 10px;
+}
+
+footer {
+  background-color: #41431B;
+  text-align: center;
+  padding: 50px;
+}
+footer p {
+  color: #FFFFFF;
+  font-size: 14px;
 }
