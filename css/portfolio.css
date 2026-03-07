@@ -162,8 +162,16 @@ footer {
   background-color: #41431B;
   text-align: center;
   padding: 50px;
+  width: auto;
+   
 }
 footer p {
   color: #FFFFFF;
   font-size: 14px;
+}
+
+.presentation-text {
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.6;
 }
