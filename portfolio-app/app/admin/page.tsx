@@ -1,5 +1,5 @@
 "use client";
-import {useEffect,useState} from "react";import Home from "../page";
+import {useEffect,useState} from "react";import Home from "../portfolio";
 export default function Admin(){const [ready,setReady]=useState(false),[logged,setLogged]=useState(false),[password,setPassword]=useState(""),[message,setMessage]=useState(""),[busy,setBusy]=useState(false),[current,setCurrent]=useState(""),[next,setNext]=useState("");
 useEffect(()=>{fetch("/api/session").then(r=>r.json()).then(d=>{setLogged(d.canEdit===true);setReady(true)}).catch(()=>{setReady(true);setMessage("Connexion indisponible. Réessaie.")})},[]);
 async function login(e:React.FormEvent){e.preventDefault();setBusy(true);setMessage("");try{const r=await fetch("/api/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({password})});if(!r.ok)throw Error(await r.text());setPassword("");setLogged(true)}catch(e){setMessage(e instanceof Error?e.message:"Connexion impossible")}finally{setBusy(false)}}
