@@ -1,4 +1,2 @@
-import {readSource} from "../../../source";
-export async function GET(req:Request,ctx:{params:Promise<{key:string}>}){const {key}=await ctx.params;
-if(!/^[a-f0-9-]{36}\.(jpg|png|webp)$/.test(key))return new Response("Introuvable",{status:404});
-try{const r=await readSource("/api/images/"+key);if(!r.ok)return new Response("Image indisponible",{status:r.status===404?404:503});const type=r.headers.get("content-type")?.split(";")[0];if(!["image/jpeg","image/png","image/webp"].includes(type||""))throw Error();return new Response(r.body,{headers:{"Content-Type":type!,"X-Content-Type-Options":"nosniff","Cache-Control":"public, max-age=86400"}})}catch{return new Response("Image indisponible",{status:503})}}
+import {get} from "../../../storage";
+export async function GET(req:Request,ctx:{params:Promise<{key:string}>}){const {key}=await ctx.params;if(!/^[a-f0-9-]{36}\.(jpg|png|webp)$/.test(key))return new Response("Introuvable",{status:404});try{const r=await get("portfolio/images/"+key,{access:"private",storeId:process.env.BLOB_STORE_ID});if(!r||r.statusCode!==200)return new Response("Introuvable",{status:404});return new Response(r.stream,{headers:{"Content-Type":r.blob.contentType||"application/octet-stream","X-Content-Type-Options":"nosniff","Cache-Control":"public,max-age=31536000,immutable"}})}catch{return new Response("Image indisponible",{status:503})}}

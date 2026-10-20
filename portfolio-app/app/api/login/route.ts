@@ -1,0 +1,4 @@
+import {session,record,checkPassword,sameOrigin,allowLogin} from "../../auth";
+export const dynamic="force-dynamic";
+export async function POST(req:Request){if(!sameOrigin(req))return new Response("Origine refusée",{status:403});if(!allowLogin(req))return new Response("Trop de tentatives. Réessaie plus tard.",{status:429});if(Number(req.headers.get("content-length"))>2048)return new Response("Requête trop volumineuse",{status:413});
+try{const {password}=await req.json();if(typeof password!=="string"||password.length>256)return new Response("Identifiants incorrects",{status:401});const r=await record();if(!checkPassword(password,r))return new Response("Mot de passe incorrect",{status:401});const s=await session();s.admin=true;s.version=r.version;await s.save();return Response.json({ok:true})}catch{return new Response("Connexion indisponible",{status:503})}}

@@ -1,0 +1,2 @@
+import type {Portfolio} from "./data";
+export function validContent(d:any):d is Portfolio{return !!d&&["name","title","intro","about","email","github","linkedin","skills","journey"].every(k=>typeof d[k]==="string"&&d[k].length<30000)&&typeof d.aboutImage==="string"&&Array.isArray(d.projects)&&d.projects.length<=30&&d.projects.every((p:any)=>p&&["title","name","category","description","tags","url","image","kind"].every(k=>typeof p[k]==="string"&&p[k].length<30000))}

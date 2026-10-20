@@ -1,1 +1,1 @@
-export async function GET(){return Response.json({canEdit:false},{headers:{"Cache-Control":"no-store"}})}
+import {canEdit} from "../../auth";export const dynamic="force-dynamic";export async function GET(){try{return Response.json({canEdit:await canEdit()},{headers:{"Cache-Control":"private,no-store"}})}catch{return Response.json({canEdit:false},{headers:{"Cache-Control":"no-store"}})}}
